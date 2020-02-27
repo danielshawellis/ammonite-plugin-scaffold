@@ -17,8 +17,9 @@
  /**
   * GETTING STARTED WITH THIS SCAFFOLD
   * -Fill out plugin header information
-  * -Search and replace container class name in this file
+  * -Search and replace container class name ('Ammonite_Plugin_Scaffold') in this file
   * -Rename root plugin directory and ammonite-plugin-scaffold.php to match
+  * -Remove example dunctions
   */
 
 /*
@@ -26,4 +27,19 @@
 */
 if ( ! defined( 'ABSPATH' ) ) {
   die;
+}
+
+/*
+  Plugin Base Class
+*/
+if ( !class_exists( 'Ammonite_Plugin_Scaffold' ) ) {
+  class Ammonite_Plugin_Scaffold {
+    // Add class methods here
+    public static function example_function() {
+
+    }
+  }
+
+  // Call methods on load here
+  Ammonite_Plugin_Scaffold::example_function();
 }
