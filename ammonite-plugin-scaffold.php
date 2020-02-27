@@ -21,6 +21,7 @@
   * -Rename root plugin directory and ammonite-plugin-scaffold.php to match
   * -Remove unecessary example functions
   * -Rename stylesheet and script in both this file (handle and path) and their location if they are being used
+  * -Rename shortcode and template if they're being used
   */
 
 /*
