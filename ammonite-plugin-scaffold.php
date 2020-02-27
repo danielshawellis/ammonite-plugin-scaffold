@@ -19,8 +19,9 @@
   * -Fill out plugin header information
   * -Search and replace container class name ('Ammonite_Plugin_Scaffold') in this file
   * -Rename root plugin directory and ammonite-plugin-scaffold.php to match
-  * -Remove unecessary example functions
+  * -Remove unecessary example functions and rename necessary ones
   * -Rename stylesheet and script in both this file (handle and path) and their location if they are being used
+  * -Rename shortcode and template if they're being used
   */
 
 /*
