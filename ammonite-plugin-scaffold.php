@@ -40,6 +40,7 @@ if ( !class_exists( 'Ammonite_Plugin_Scaffold' ) ) {
 
     }
 
+
     public static function example_register_styles_and_scripts() {
       add_action( 'wp_enqueue_scripts', function() {
         // Remove jQuery dependency if unnecessary
@@ -54,10 +55,22 @@ if ( !class_exists( 'Ammonite_Plugin_Scaffold' ) ) {
         wp_enqueue_style( 'ammonite-plugin-scaffold-styles' );
       } );
     }
+
+
+    public static function example_add_shortcode() {
+      // Use [ammonite_plugin_scaffold_example_shortcode] to call this shortcode
+      add_shortcode( 'ammonite_plugin_scaffold_example_shortcode', array( 'Ammonite_Plugin_Scaffold', 'example_shortcode_callback' ) );
+    }
+
+    public static function example_shortcode_callback() {
+      // Associated scripts and styles can also be enqueued here for improved performance
+      include( 'templates/ammonite-plugin-scaffold-example-shortcode-template.php' );
+    }
   }
 
   // Call methods on load here
   Ammonite_Plugin_Scaffold::example_function();
   Ammonite_Plugin_Scaffold::example_register_styles_and_scripts();
   Ammonite_Plugin_Scaffold::example_enqueue_styles_and_scripts();
+  Ammonite_Plugin_Scaffold::example_add_shortcode();
 }
